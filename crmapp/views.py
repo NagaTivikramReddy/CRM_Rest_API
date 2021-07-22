@@ -28,7 +28,7 @@ class EnquieryList(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
 
-class EnquiryDetails(generics.RetrieveUpdateAPIView):
+class EnquiryDetails(generics.RetrieveAPIView):
     queryset = Enquiry.objects.filter(claimed_by__isnull=True)
     serializer_class = EnquirySerializer
     permission_classes = [permissions.IsAuthenticated]
