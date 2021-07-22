@@ -1,0 +1,21 @@
+
+
+ 
+{% for i in userenqueries.userenqueries.all %}
+<p>Name : {{i.name}}</p>   
+<p>Email : {{i.email}}</p>
+
+<p>Intersted Course : {{i}}</p>
+<p>Descrption :  {{i.description}}</p>
+
+<p>Claimed By : {{i.claimed_by}}</p>
+
+<hr>
+
+
+{%empty%}
+
+<p>No Enquiries claimed</p>
+
+{%endfor%}
+

@@ -1,0 +1,22 @@
+<h2>Welcome {{request.user.email}}</h2>
+
+
+{% if not request.user.email %}
+
+<a href="{% url 'login'%}">Login</a>
+<p>Do not have account?
+<a href="{% url 'register' %}">Register</a>
+</p> 
+
+<p><a href="{% url 'create' %}">Create enquiry</a></p>
+
+{%else%}
+
+
+
+<p><a href="{% url 'userenquiries' %}">Claimed Enquiries</a></p>
+
+<p><a href="{% url 'logout' %}">Logout</a></p>
+
+{%endif%}
+
